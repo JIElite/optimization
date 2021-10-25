@@ -82,13 +82,14 @@ plt3d = plt.figure().gca(projection='3d')
 plt3d.plot_surface(a, b, surface.compute_value(a, b), cmap=cm.coolwarm, alpha=0.5)
 
 # initial point is (4, 10)
-optimizer1 = GradientDescent(20, 20)
-optimizer2 = Adagrad(20, 20)
+optimizer1 = GradientDescent(20, 100)
+optimizer2 = Adagrad(20, 100)
 
 def update(args):
     x, y, z = optimizer1.update(surface, lr=0.03)
-    x_, y_, z_ = optimizer2.update(surface, lr=1.5)
+    x_, y_, z_ = optimizer2.update(surface, lr=8)
     plt3d.scatter(np.array([x, x_]), np.array([y, y_]), np.array([z, z_]), c=['red', 'blue'])
 
-line_ani = animation.FuncAnimation(plt3d.figure, update, 30, repeat=False) 
+ani = animation.FuncAnimation(plt3d.figure, update, 30, repeat=False)
+# ani.save('demo.gif', writer='imagemagick', fps=60)
 plt.show()
