@@ -81,7 +81,7 @@ surface = SaddlePoint()
 plt3d = plt.figure().gca(projection='3d')
 plt3d.plot_surface(a, b, surface.compute_value(a, b), cmap=cm.coolwarm, alpha=0.5)
 
-# initial point is (4, 10)
+# initial point is (20, 100)
 optimizer1 = GradientDescent(20, 100)
 optimizer2 = Adagrad(20, 100)
 
