@@ -2,6 +2,8 @@
 
 This example provides a simple method to visualize optimization process on specific surface e.g., Positive Definite Case, Saddle Point ... etc.
 
+![](./demo.gif)
+
 ## Environment Setup
 We use python3.8, numpy 1.21.2, matplotlib 3.4.3 for this example
 
