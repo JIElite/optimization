@@ -58,6 +58,8 @@ class Optimizer
  
         return x, y, z
 ```
+## Reference
+- [Mark Chang's Blog](https://ckmarkoh.github.io/blog/categories/optimization-methods)
 
 ## License
 MIT License
