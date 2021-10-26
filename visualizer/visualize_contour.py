@@ -23,10 +23,10 @@ def update(i):
         plt.legend()
     x, y, _ = optimizer1.update(lr=0.105)
     x_, y_, _ = optimizer2.update(lr=2.5)
-    plt.scatter(np.array(x), np.array(y), c='b', label='gradient_descent')
-    plt.scatter(np.array(x_), np.array(y_), c='r', label='adagrad')
-    plt.plot(np.array(optimizer1.X), np.array(optimizer1.Y), c='blue')   # plot the line path
-    plt.plot(np.array(optimizer2.X), np.array(optimizer2.Y), c='red')  # plot the line path
+    plt.scatter(np.array(x), np.array(y), c='r', label='gradient_descent')
+    plt.scatter(np.array(x_), np.array(y_), c='b', label='adagrad')
+    plt.plot(np.array(optimizer1.X), np.array(optimizer1.Y), c='red')   # plot the line path
+    plt.plot(np.array(optimizer2.X), np.array(optimizer2.Y), c='blue')  # plot the line path
 
 ani = animation.FuncAnimation(fig, update, 30, repeat=False, interval=500)
 # ani.save('demo_contour.gif', writer='imagemagick', fps=60)
